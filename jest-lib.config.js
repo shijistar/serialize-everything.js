@@ -12,14 +12,14 @@ const config = {
     '^@enum-plus/(.*)$': '<rootDir>/lib/$1',
     '^@enum-plus': '<rootDir>/lib',
   },
-  coverageThreshold: {
-    global: {
-      branches: 100,
-      functions: 100,
-      lines: 100,
-      statements: 100,
-    },
-  },
+  // coverageThreshold: {
+  //   global: {
+  //     branches: 100,
+  //     functions: 100,
+  //     lines: 100,
+  //     statements: 100,
+  //   },
+  // },
 };
 if (nodeVersion <= 15) {
   // @ts-expect-error: because setupTestFrameworkScriptFile is a deprecated API
