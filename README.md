@@ -1,37 +1,45 @@
-# deep-serialize
+# serialize-everything.js
 
-A JSON enhancement library that supports deep serialization of arbitrary JavaScript objects, including values like Function, Date, RegExp, and even Symbol
+`serialize-everything.js` is a lightweight JavaScript serialization library designed to provide comprehensive serialization and deserialization capabilities. It can handle nearly all JavaScript data types, including `primitives`, `Dates`, `RegExp`, `Symbols`, `Functions`, and `Classes`. The core goal is to ensure that the dynamic characteristics of data are preserved during serialization and deserialization, allowing Functions and Classes to remain `executable` after reconstruction. A particularly valuable use case is the ability to share test cases between `Jest` unit tests and `Playwright` end-to-end tests. For libraries that support both browser and Node.js environments, this library provides a unified solution, eliminating the need to write separate test code for different environments.
+
+## Key Features
+
+- **Complete Serialization**: Handle primitives, complex objects, Dates, Symbols, RegExp, and more
+- **Code Preservation**: Functions and classes remain fully executable after deserialization
+- **Cross-Environment Compatible**: Seamlessly works in browsers, Node.js, and various JavaScript runtimes
+- **Testing Powerhouse**: Reuse test cases between unit tests (Jest) and end-to-end tests (Playwright)
+- **Lightweight**: Zero dependencies, ensuring fast performance and small bundle size
 
 ## Installation
 
 Install using npm:
 
 ```bash
-npm install deep-serialize
+npm install serialize-everything.js
 ```
 
 Install using pnpm:
 
 ```bash
-pnpm add deep-serialize
+pnpm add serialize-everything.js
 ```
 
 Install using bun:
 
 ```bash
-bun add deep-serialize
+bun add serialize-everything.js
 ```
 
 Or using yarn:
 
 ```bash
-yarn add deep-serialize
+yarn add serialize-everything.js
 ```
 
 ## Usage
 
 ```javascript
-import { serialize, deserialize } from 'deep-serialize';
+import { stringify, parse } from 'serialize-everything.js';
 
 const obj = {
   name: 'John',
@@ -52,9 +60,9 @@ const obj = {
   },
 };
 
-const serializedString = serialize(obj);
-console.log(serializedString);
+const content = stringify(obj);
+console.log(content);
 
-const deserializedResult = deserialize(serializedString);
-console.log(deserializedResult);
+const obj = parse(content);
+console.log(obj);
 ```
