@@ -1,5 +1,7 @@
 # serialize-everything.js
 
+**ATTENTION: 此项目已经迁移到 [jsoneo](https://github.com/shijistar/jsoneo)， 请访问新仓库以获取最新更新和信息。**
+
 `serialize-everything.js` 是一个轻量级的 JavaScript 序列化库，旨在提供全面的序列化和反序列化功能。它能够处理几乎所有 JavaScript 数据类型，包括 `原始类型`、`日期`、`正则表达式`、`符号`、`函数` 和 `类` 等。
 
 核心目标是确保在序列化和反序列化过程中，数据的动态特性得以保留，使得 `函数` 和 `类` 在重建后仍然可执行。一个特别有价值的使用场景是，可以让 `Jest` 单元测试和 `Playwright` 端到端测试之间共享一套测试用例。对于哪些同时支持浏览器和 Node.js 环境的类库，这个库提供了一个统一的解决方案，你不需要为不同的环境编写两套测试代码。

@@ -1,5 +1,7 @@
 # serialize-everything.js
 
+**ATTENTION: THIS PROJECT HAS BEEN RENAMED TO [jsoneo](https://github.com/shijistar/jsoneo). PLEASE VISIT THE NEW REPOSITORY FOR THE LATEST UPDATES AND INFORMATION.**
+
 `serialize-everything.js` is a lightweight JavaScript serialization library designed to provide comprehensive serialization and deserialization capabilities. It can handle nearly all JavaScript data types, including `primitives`, `Dates`, `RegExp`, `Symbols`, `Functions`, and `Classes`.
 
 The core goal is to ensure that the dynamic characteristics of data are preserved during serialization and deserialization, allowing Functions and Classes to remain `executable` after reconstruction. A particularly valuable use case is the ability to share test cases between `Jest` unit tests and `Playwright` end-to-end tests. For libraries that support both browser and Node.js environments, this library provides a unified solution, eliminating the need to write separate test code for different environments.
